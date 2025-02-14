@@ -1,0 +1,130 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-left {
+    width: 50%;
+    background-color: #323137;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px;
+  }
+  
+  .logo {
+    color: #00bfff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: flex
+  }
+
+  .login-left img {
+    width: 56px;
+  }
+
+  .login-left h1{
+    color: #0CF;
+    text-align: center;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .login-left p {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .login-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+  }
+
+  .login-right h2{
+    color: #000;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-options {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .forgot-password {
+    font-size: 0.9rem;
+    color: gray;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-button {
+    width: 100%;
+    background-color: #12BA23;
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.10);
+    
+  }
+  
+  .login-button:hover {
+    background-color: #008c00;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .register-link a {
+    color: #00b300;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
