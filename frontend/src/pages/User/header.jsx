@@ -13,7 +13,7 @@ const Header = () => {
 
             <nav className="nav-menu">
                 <Link to={"/solicitacao"}>Solicitação</Link>
-                <Link to={"/solicitacao"}>Suas Reservas</Link>
+                <Link to={"/suasReservas"}>Suas Reservas</Link>
                 <Link to={"/solicitacao"}>Notificação</Link>
             </nav>
 
