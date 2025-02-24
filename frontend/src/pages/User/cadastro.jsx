@@ -8,8 +8,8 @@ const Cadastro = () => {
       <div className="cadastro-box">
         <h2>Cadastro</h2>
         <p className="login-link">
-            Ainda não tem uma conta? <Link to="/login">Fazer login</Link>
-          </p>
+          Ainda não tem uma conta? <Link to="/login">Fazer login</Link>
+        </p>
         <form className="registerForm">
           <div className="input-group">
             <div>

@@ -34,10 +34,11 @@ const Login = () => {
               Esqueceu a senha?
             </a>
           </div>
-
-          <button type="submit" className="login-button">
-            Entrar
-          </button>
+          <Link to={"/solicitacao"}>
+            <button type="submit" className="login-button">
+              Entrar
+            </button>
+          </Link>
 
           <p className="register-link">
             Ainda não tem uma conta? <Link to="/cadastro">Criar conta</Link>
