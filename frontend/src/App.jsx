@@ -4,6 +4,7 @@ import Login from './pages/User/login'; // Importe a página de login
 import Cadastro from './pages/User/cadastro'; // Importe a página de cadastro
 import Solicitacao from './pages/User/solicitacao';
 import SuasReservas from './pages/User/suasReservas';
+import Perfil from './pages/User/perfil';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Login />} /> {/* Rota padrão */}
         <Route path="/solicitacao" element={<Solicitacao />} />
         <Route path="/suasReservas" element={<SuasReservas />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </Router>
   );

@@ -60,6 +60,8 @@
     display: flex;
     gap: 15px;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .input-group div {

@@ -8,13 +8,15 @@
     height: 70px;
     width: 100%;
   }
+
   .logo-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
   }
-  .logo-menu h1{
+
+  .logo-menu h1 {
     font-size: 25px;
     color: #0CF;
   }
@@ -23,34 +25,34 @@
     width: 20px;
   }
 
-  .nav-menu{
+  .nav-menu {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
-  .nav-menu a{
+
+  .nav-menu a {
     color: white;
     text-decoration: none;
   }
 
-  .nav-menu a:hover{
+  .nav-menu a:hover {
     text-decoration: underline;
   }
 
-  .perfil-menu a{
+  .perfil-menu a {
     color: white;
     text-decoration: none;
     text-align: right;
     font: 600 17px Poppins;
   }
 
-  .perfil-menu a:hover{
+  .perfil-menu a:hover {
     color: #0CF;
   }
 
-/* MAIN */
+  /* MAIN */
 
   .main {
     width: 100%;
@@ -61,7 +63,7 @@
     justify-content: center;
     padding-top: 40px;
   }
-  
+
   .form {
     width: 95%;
     display: flex;
@@ -71,34 +73,36 @@
     justify-content: space-between;
   }
 
-  .form-group{
+  .form-group {
     width: 100%;
     display: flex;
     gap: 30px;
     justify-content: space-between;
   }
 
-  .form-item{
+  .form-item {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .tipos{
+  .tipos {
     align-items: center;
     justify-content: space-around;
     display: flex;
   }
-  
-  .form-group input, select {
+
+  .form-group input,
+  select {
     background-color: white;
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
   }
-  
-  .btn-reservar {
+
+  .btn-reservar,
+  .btn-editar-perfil {
     background-color: #12BA23;
     color: white;
     padding: 5px;
@@ -108,31 +112,60 @@
     width: 25%;
     font: 700 20px Poppins;
   }
-  
+
   .btn-reservar:hover {
     background-color: #008c00;
   }
-  
+
   /* SECTION */
   .reservas {
     width: 95%;
     margin-top: 10px;
   }
-  
+
   .reservas table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
   }
-  
-  .reservas th, td {
+
+  .reservas th,
+  td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: center;
   }
-  
+
   .reservas th {
     background-color: #222;
     color: white;
   }
-  
+
+  .delete-perfil {
+    color: #B02600;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    ;
+  }
+
+  .logout{
+    color: #323137;
+text-align: right;
+font-family: Poppins;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+  }
