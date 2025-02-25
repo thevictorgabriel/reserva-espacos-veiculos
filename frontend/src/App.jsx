@@ -6,6 +6,11 @@ import Solicitacao from './pages/User/solicitacao';
 import SuasReservas from './pages/User/suasReservas';
 import Perfil from './pages/User/perfil';
 
+import AdmSolicitacoes from './pages/Admin/adm-sollicitacoes';
+import ListaPrevia from './pages/Admin/lista-previa';
+import Cadastros from './pages/Admin/cadastros';
+import AdmPerfil from './pages/Admin/adm-perfil';
+
 function App() {
   return (
     <Router>
@@ -16,6 +21,11 @@ function App() {
         <Route path="/solicitacao" element={<Solicitacao />} />
         <Route path="/suasReservas" element={<SuasReservas />} />
         <Route path="/perfil" element={<Perfil />} />
+
+        <Route path="/adm-solicitacoes" element={<AdmSolicitacoes />} />
+        <Route path="/lista-previa" element={<ListaPrevia />} />
+        <Route path="/cadastros" element={<Cadastros />} />
+        <Route path="/adm-perfil" element={<AdmPerfil />} />
       </Routes>
     </Router>
   );

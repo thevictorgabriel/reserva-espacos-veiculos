@@ -34,7 +34,7 @@ const Login = () => {
               Esqueceu a senha?
             </a>
           </div>
-          <Link to={"/solicitacao"}>
+          <Link to={"/adm-solicitacoes"}>
             <button type="submit" className="login-button">
               Entrar
             </button>

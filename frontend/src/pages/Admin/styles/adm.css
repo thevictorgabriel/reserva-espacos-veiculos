@@ -12,7 +12,6 @@
   .logo-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   .logo-menu h1 {
@@ -22,7 +21,6 @@
 
   .logo-menu img {
     width: 20px;
-    margin-right: 5px;
   }
 
   .nav-menu {
@@ -118,27 +116,39 @@
   }
 
   /* SECTION */
-  .reservas {
+  .solicitacoes {
     width: 95%;
     margin-top: 10px;
   }
 
-  .reservas table {
+  .solicitacoes table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
   }
 
-  .reservas th,
+  
+
+  .solicitacoes th,
   td {
     padding: 10px;
     border: 1px solid #000;
     text-align: center;
   }
 
-  .reservas th {
+  .cabecalho {
     background-color: #222;
     color: white;
+  }
+  
+  .celula-titulo {
+    background-color: #7AE4FF;
+    width: 100%;
+  }
+
+  .avaliar {
+    display: flex;
+    justify-content: space-around;
   }
 
   .delete-perfil {
@@ -155,17 +165,17 @@
     ;
   }
 
-  .logout{
+  .logout {
     color: #323137;
-text-align: right;
-font-family: Poppins;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: none;
-text-decoration-thickness: auto;
-text-underline-offset: auto;
-text-underline-position: from-font;
+    text-align: right;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
   }
