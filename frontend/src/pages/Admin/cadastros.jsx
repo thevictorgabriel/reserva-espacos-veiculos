@@ -13,15 +13,15 @@ const Cadastros = () => {
                     <h2>Solicitações de cadastro</h2>
                     <table>
                         <tr>
-                            <th className='cabecalho'>Sala/Veículo</th>
-                            <th className='cabecalho'>Duração</th>
-                            <th className='cabecalho'>Solicitante</th>
+                            <th className='cabecalho'>Nome</th>
+                            <th className='cabecalho'>CPF</th>
+                            <th className='cabecalho'>SIAPE</th>
                             <th className='cabecalho'>Avaliar</th>
                         </tr>
                         <tr>
-                            <td>Picape S10 LTZ</td>
-                            <td>29/02/2024 - 14:00 até 29/02/2024 - 18:00</td>
-                            <td>Alternei Brito</td>
+                            <td>Victor Gabriel Martins de Araujo</td>
+                            <td>10210210220</td>
+                            <td>123456789</td>
                             <td className='avaliar'>
                                 <img src={Negar}/>
                                                                 <img src={Aceitar}/>

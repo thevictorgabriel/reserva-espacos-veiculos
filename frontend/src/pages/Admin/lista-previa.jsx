@@ -13,13 +13,18 @@ const ListaPrevia = () => {
 
                     <div className="form-group">
                         <div className='form-item'>
-                            <label>Data início *</label>
-                            <input type="date" />
+                            <label>Nome *</label>
+                            <input type="text" />
                         </div>
 
                         <div className='form-item'>
-                            <label>Data final</label>
-                            <input type="date" />
+                            <label>CPF *</label>
+                            <input type="text" />
+                        </div>
+
+                        <div className='form-item'>
+                            <label>SIAPE *</label>
+                            <input type="text" />
                         </div>
                     </div>
 
@@ -29,15 +34,15 @@ const ListaPrevia = () => {
                     <h2>Lista Prévia</h2>
                     <table>
                         <tr>
-                            <th className='cabecalho'>Sala/Veículo</th>
-                            <th className='cabecalho'>Duração</th>
-                            <th className='cabecalho'>Solicitante</th>
-                            <th className='cabecalho'>Avaliar</th>
+                            <th className='cabecalho'>Nome</th>
+                            <th className='cabecalho'>CPF</th>
+                            <th className='cabecalho'>SIAPE</th>
+                            <th className='cabecalho'>Ações</th>
                         </tr>
                         <tr>
-                            <td>Picape S10 LTZ</td>
-                            <td>29/02/2024 - 14:00 até 29/02/2024 - 18:00</td>
-                            <td>Alternei Brito</td>
+                            <td>Victor Gabriel Martins de Araujo</td>
+                            <td>10210210220</td>
+                            <td>123456789</td>
                             <td className='avaliar'>
                                 <img src={Editar}/>
                                 <img src={Lixeira}/>
