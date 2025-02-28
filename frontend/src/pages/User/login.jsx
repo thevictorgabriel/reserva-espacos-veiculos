@@ -1,9 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import './styles/login.css';
 import Logo from '../../assets/logoReservy.svg';
+import api from "@/axios";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError(""); // Resetando o erro
+
+    try {
+      const response = await api.post("login/", { email, password });
+
+      if (response.status === 200) {
+        localStorage.setItem("token", response.data.access); // Armazena o token
+        navigate("/perfil"); // Redireciona para a página de perfil
+      }
+    } catch (err) {
+      setError("Credenciais inválidas ou usuário não aprovado.");
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="login-left">
@@ -22,23 +44,36 @@ const Login = () => {
 
       <div className="login-right">
         <h2>Login</h2>
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <label>Email</label>
-          <input type="email" placeholder="Digite seu email" required />
+          <input 
+            type="email" 
+            placeholder="Digite seu email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
 
           <label>Senha</label>
-          <input type="password" placeholder="Digite sua senha" required />
+          <input 
+            type="password" 
+            placeholder="Digite sua senha" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
+          />
+
+          {error && <p className="error-message">{error}</p>}
 
           <div className="login-options">
             <a href="#" className="forgot-password">
               Esqueceu a senha?
             </a>
           </div>
-          <Link to={"/adm-solicitacoes"}>
-            <button type="submit" className="login-button">
-              Entrar
-            </button>
-          </Link>
+
+          <button type="submit" className="login-button">
+            Entrar
+          </button>
 
           <p className="register-link">
             Ainda não tem uma conta? <Link to="/cadastro">Criar conta</Link>

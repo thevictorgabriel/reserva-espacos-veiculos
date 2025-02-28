@@ -11,6 +11,10 @@ from rest_framework.permissions import IsAuthenticated
 from .decorators import admin_required
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Bem-vindo à página inicial, aqui não existe nada...")
 
 #Endpoint para listar todas as reservas. Somente administradores podem acessar.
 @admin_required
@@ -32,21 +36,44 @@ def deletar_reserva(request, reserva_id):
 
 @api_view(['POST'])
 def cadastro(request):
-    serializer = UsuarioSerializer(data=request.data)
-    if serializer.is_valid():
-        cpf = serializer.validated_data['cpf']
-        siape = serializer.validated_data['siape']
+    if request.method == 'POST':
+        # Extrair os dados do usuário da requisição
+        nome = request.data.get('nome')
+        siape = request.data.get('siape')
+        email = request.data.get('email')
+        cpf = request.data.get('cpf')
+        telefone = request.data.get('telefone')
+        senha = request.data.get('senha')
+        status = 'pendente'  # ou o valor que você determinar
+        is_admin = False  # ou o valor que você determinar
 
-        if ListaPrevia.objects.filter(cpf=cpf, siape=siape).exists():
-            usuario = serializer.save(status='aprovado')  # Aprova automaticamente
-            enviar_email(usuario.email, "Cadastro Aprovado", "Seu cadastro foi aprovado automaticamente.")
-            return Response({"message": "Cadastro aprovado automaticamente."}, status=status.HTTP_201_CREATED)
-        
-        usuario = serializer.save(status='pendente')  # Fica pendente
-        enviar_email(usuario.email, "Cadastro Pendente", "Seu cadastro está aguardando aprovação do administrador.")
-        return Response({"message": "Cadastro pendente, aguarde aprovação."}, status=status.HTTP_201_CREATED)
+        # Verifica se o usuário já está na lista prévia
+        usuarios_autorizados = [
+            '987.654.32',  # CPF de exemplo de um usuário autorizado
+            # Adicione outros CPFs da lista prévia aqui
+        ]
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if cpf not in usuarios_autorizados:
+            return Response({"detail": "Usuário não autorizado."}, status=400)
+
+        # Criar o usuário
+        usuario = Usuario(
+            nome=nome,
+            siape=siape,
+            email=email,
+            cpf=cpf,
+            telefone=telefone,
+            status=status,
+            is_admin=is_admin
+        )
+
+        # Usar o set_password para salvar a senha de forma segura
+        usuario.set_password(senha)
+
+        # Salvar o usuário no banco de dados
+        usuario.save()
+
+        return Response({"detail": "Usuário cadastrado com sucesso!"}, status=201)
 
 @api_view(['POST'])
 def login(request):

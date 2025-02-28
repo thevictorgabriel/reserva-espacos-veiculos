@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib import admin
-from reservyApp.views import perfil
+from reservyApp.views import perfil, home
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from reservyApp.views import (
     listar_usuarios, detalhe_usuario, cadastro, login, adicionar_lista_previa, avaliar_reserva
@@ -8,6 +8,7 @@ from reservyApp.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),  # Página inicial
 
     # Endpoints da API
     path('api/usuarios/', listar_usuarios, name='listar_usuarios'),
