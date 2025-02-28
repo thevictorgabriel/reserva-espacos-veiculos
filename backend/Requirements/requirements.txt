@@ -1,3 +1,4 @@
 django 
 djangorestframework 
 django-cors-headerscl
+djangorestframework-simplejwt

@@ -1,7 +1,28 @@
 from django.urls import path
-from reservyApp.views import users_list, users_detail
+from django.contrib import admin
+from reservyApp.views import perfil
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from reservyApp.views import (
+    listar_usuarios, detalhe_usuario, cadastro, login, adicionar_lista_previa, avaliar_reserva
+)
 
 urlpatterns = [
-    path('api/users/', users_list, name='users-list'),  # For listing and creating users
-    path('api/users/<int:pk>/', users_detail, name='users-detail'),  # For updating and deleting users
+    path('admin/', admin.site.urls),
+
+    # Endpoints da API
+    path('api/usuarios/', listar_usuarios, name='listar_usuarios'),
+    path('api/usuarios/<int:pk>/', detalhe_usuario, name='detalhe_usuario'),
+    path('api/cadastro/', cadastro, name='cadastro'),
+    path('api/login/', login, name='login'),
+
+    # Administração de cadastros e reservas
+    path('api/lista_previa/adicionar/', adicionar_lista_previa, name='adicionar_lista_previa'),
+    path('api/reservas/avaliar/', avaliar_reserva, name='avaliar_reserva'),
+    
+    # Endpoints para autenticação JWT
+    path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    
+    # Endpoint para perfil de usuario
+    path('api/perfil/', perfil, name='perfil'),
 ]
