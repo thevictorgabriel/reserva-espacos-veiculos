@@ -49,46 +49,5 @@ RESERVY é um sistema de reservas de carros e veículos que permite a gestão de
 ## Desing de Inteface
 - FIGMA: [Protótipo](https://www.figma.com/design/Bt3hWvBnnAidKShryWMzrn/SUPER?node-id=713-2)
 
-## Instalação e Configuração
-
-### Backend (Django)
-1. Acesse a pasta `backend`:
-   ```bash
-   cd backend
-   ```
-2. Crie um ambiente virtual:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # No Windows use: venv\Scripts\activate
-   ```
-3. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Execute as migrações:
-   ```bash
-   python manage.py migrate
-   ```
-5. Crie um superusuário para ser o Administrador:
-   ```bash
-   python manage.py createsuperuser
-   ```
-6. Inicie o servidor:
-   ```bash
-   python manage.py runserver
-   ```
-
-### Frontend (React)
-1. Acesse a pasta `frontend`:
-   ```bash
-   cd frontend
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Inicie o projeto:
-   ```bash
-   npm start
-   ```
-   
+## Licença
+Este projeto está sob a [licença MIT](LICENSE)
