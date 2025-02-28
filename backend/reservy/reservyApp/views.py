@@ -44,17 +44,16 @@ def cadastro(request):
         cpf = request.data.get('cpf')
         telefone = request.data.get('telefone')
         senha = request.data.get('senha')
-        status = 'pendente'  # ou o valor que você determinar
-        is_admin = False  # ou o valor que você determinar
+        status = 'pendente'
+        is_admin = False  
 
-        # Verifica se o usuário já está na lista prévia
-        usuarios_autorizados = [
-            '987.654.32',  # CPF de exemplo de um usuário autorizado
-            # Adicione outros CPFs da lista prévia aqui
-        ]
-
-        if cpf not in usuarios_autorizados:
+        # Verifica se o usuário está na Lista Prévia consultando o banco de dados
+        if not ListaPrevia.objects.filter(cpf=cpf, siape=siape).exists():
             return Response({"detail": "Usuário não autorizado."}, status=400)
+
+        # Verifica se já existe um usuário cadastrado com o mesmo CPF ou SIAPE
+        if Usuario.objects.filter(cpf=cpf).exists() or Usuario.objects.filter(siape=siape).exists():
+            return Response({"detail": "Usuário já cadastrado."}, status=400)
 
         # Criar o usuário
         usuario = Usuario(
@@ -69,11 +68,10 @@ def cadastro(request):
 
         # Usar o set_password para salvar a senha de forma segura
         usuario.set_password(senha)
-
-        # Salvar o usuário no banco de dados
         usuario.save()
 
         return Response({"detail": "Usuário cadastrado com sucesso!"}, status=201)
+
 
 @api_view(['POST'])
 def login(request):
