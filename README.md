@@ -39,7 +39,7 @@ RESERVY é um sistema de reservas de carros e veículos que permite a gestão de
 - Aprova ou nega solicitações de reserva
 - Mantém a lista prévia de usuários (Nome, CPF e SIAPE)
 
-### Backlog: LINK
+#### [Backlog](https://github.com/users/thevictorgabriel/projects/2)
 
 ## Uso do Sistema
 - O administrador deve cadastrar a lista prévia de usuários (Nome, CPF, SIAPE)
