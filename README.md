@@ -46,7 +46,7 @@ RESERVY é um sistema de reservas de salas e veículos que permite a gestão de 
 - Os usuários cadastrados só poderão acessar o sistema após aprovação do administrador
 - As reservas também precisarão de aprovação antes de serem confirmadas
 
-## Desing de Inteface
+## Design de Inteface
 - FIGMA: [Protótipo](https://www.figma.com/design/Bt3hWvBnnAidKShryWMzrn/SUPER?node-id=713-2)
 
 ## Licença
