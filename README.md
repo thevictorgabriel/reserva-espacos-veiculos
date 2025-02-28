@@ -47,7 +47,7 @@ RESERVY é um sistema de reservas de carros e veículos que permite a gestão de
 - As reservas também precisarão de aprovação antes de serem confirmadas
 
 ## Desing de Inteface
-- FIGMA: LINK
+- FIGMA: [Protótipo](https://www.figma.com/design/Bt3hWvBnnAidKShryWMzrn/SUPER?node-id=713-2)
 
 ## Instalação e Configuração
 
