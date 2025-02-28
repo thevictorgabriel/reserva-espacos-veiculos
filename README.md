@@ -2,7 +2,7 @@
 
 <img src="./documentation/imagem.png" alt="Exemplo imagem">
 
-RESERVY é um sistema de reservas de carros e veículos que permite a gestão de usuários e agendamentos de forma eficiente. O sistema possui dois tipos de usuários: Administrador e Usuário comum.
+RESERVY é um sistema de reservas de salas e veículos que permite a gestão de usuários e agendamentos de forma eficiente. O sistema possui dois tipos de usuários: Administrador e Usuário comum.
 
 ## Tecnologias Utilizadas
 
